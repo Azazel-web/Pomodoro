@@ -24,17 +24,10 @@ function startTimer() {
    buttonStart.addEventListener('click', function () {
       circle()
       buttonStart.style.display = 'none'
-
       const timeStart = Date.now(); // время когда счётчик запустился (тип number в миллисекундах)
 
       let x = setInterval(() => {
          const currentDelay = Math.round((resentDelay - (Date.now() - timeStart)) / 1000);
-         
-         timerData.innerHTML = `:${currentDelay}`
-
-         if (currentDelay < 0) {
-            clearInterval(x);
-         }
       }, 1000)
 
    })
