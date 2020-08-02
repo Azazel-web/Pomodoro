@@ -1,0 +1,82 @@
+*, *:before, *:after {
+   box-sizing: border-box;
+}
+
+h1 {
+   margin: 0;
+}
+
+body {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   min-height: 100vh;
+   margin: 0;
+}
+
+.pomodoro__wripper {
+   padding: 10px;
+   border: 3px solid #636363;
+   border-radius: 2px;
+   box-shadow: 0 0 3px #636363;
+}
+
+.pomodoro__title {
+   text-align: center;
+   font-family: Roboto;
+   font-size: 24px;
+   line-height: 28px;
+   color: #000000;
+   margin-bottom: 100px;
+}
+
+.pomodoro__timer {
+   position: relative;
+   cursor: pointer;
+}
+
+.button {
+   position: absolute;
+   left: 40%;
+   top: 30%;
+   margin: 0;
+   padding: 0;
+   width: 0;
+   height: 0;
+   cursor: pointer;
+   background-color: transparent;
+   border-top: 48px solid transparent;
+   border-left: 70px solid #636363;
+   border-bottom: 48px solid transparent;
+   border-right: none;
+   outline: none;
+
+
+}
+
+.pomodoro__circle {
+   /*    animation: fillingCircle 10s infinite; */
+   transform-origin: center;
+   transform: rotate(-90deg);
+   transition: stroke-dashoffset 1500s;
+}
+
+/* @keyframes fillingCircle {
+   0% {
+      stroke-dashoffset: 0;
+      stroke-dasharray: 0;
+   }
+   100% {
+      stroke-dashoffset: 716;
+      stroke-dasharray: 100%;
+   }
+} */
+.pomodoro__data {
+   position: absolute;
+   left: -5%;
+   top: 20%;
+   transform: translate3d(50%, 50%, 0);
+   font-size: 64px;
+   line-height: 75px;
+   color: #636363;
+}
